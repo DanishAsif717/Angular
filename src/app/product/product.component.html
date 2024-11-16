@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+<input type="number" [(ngModel)]="price">
+@switch (price) {
+
+@case(1800)
+{
+  <h1>hi</h1>
+}
+
+@case(2000)
+{
+  <h1>hi</h1>
+}
+
+@default {
+  <h1>bye</h1>
+}
+
+
+
+
+}
+
+
+      <!-- structural Directive -->
+        <!-- <div class="col-md-4" *ngFor="let per of myPro">
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-success">Header</div>
+                <div class="card-body text-success">
+                  <h5 class="card-title">{{per.id}}</h5>
+                  <p class="card-text">{{per.name}}</p>
+                </div>
+                <div class="card-footer bg-transparent border-success">{{per.price}}</div>
+              </div> 
+        </div>-->
+
+        <!-- control flow statement -->
+
+
+        @for(per of myPro; track $index){
+
+          <div class="col-md-4" >
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-success">Header</div>
+                <div class="card-body text-success">
+                  <h5 class="card-title">{{per.id}}</h5>
+                  <p class="card-text">{{per.name}}</p>
+                </div>
+                <a class="btn btn-danger" (click)="ShowProduct(per)">{{per.price}}</a>
+                <div class="card-footer bg-transparent border-success">{{per.price}}</div>
+              </div> 
+        </div>
+      }
+
+
+
+
+        
+        </div></div>
